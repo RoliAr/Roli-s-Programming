@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Homeless project
-        uses: actions/email@v2
+        uses: dawidd6/action-send-mail@v3
         with:
           to: rarah1@babson.edu
           subject: New file pushed to the repository
