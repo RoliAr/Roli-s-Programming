@@ -14,6 +14,7 @@ jobs:
       - name: Homeless project
         uses: dawidd6/action-send-mail@v3
         with:
+          from: rarah1@babson.edu 
           to: rarah1@babson.edu
           subject: New file pushed to the repository
           body: A new file has been pushed to the repository
