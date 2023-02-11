@@ -1,20 +1,23 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
-
+name: Send mail
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
 jobs:
   email:
     runs-on: ubuntu-latest
     steps:
-      - name: Homeless project
+      - name: Homeless project  
         uses: dawidd6/action-send-mail@v3
         with:
-          from: rarah1@babson.edu 
-          to: rarah1@babson.edu
           subject: New file pushed to the repository
           body: A new file has been pushed to the repository
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{secrets.MAIL_USERNAME}}
+          password: ${{secrets.MAIL_PASSWORD}}
+          to: roliyaml23@gmail.com
+          from: Roli Github Test
+          
